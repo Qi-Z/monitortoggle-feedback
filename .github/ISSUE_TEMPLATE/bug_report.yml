@@ -1,0 +1,40 @@
+name: Bug report
+description: Something did not work as expected
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for testing Monitor Toggle. Please search existing issues first. Reports are public: omit serial numbers, private logs, passwords, and personal details."
+  - type: input
+    id: version
+    attributes:
+      label: App version and macOS version
+      placeholder: "1.4.0 beta / macOS 26.5.2"
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Mac model, monitor models, and connections
+      placeholder: "Mac Studio M1 Ultra; ASUS PA329CV via USB-C; AOC 24G10E via DisplayPort adapter"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include whether the app was restarted, the Mac slept, or a cable was reconnected.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Optional screenshots or diagnostic output
+      description: "Redact personal information. The --diagnose command reads display state without switching monitors."
